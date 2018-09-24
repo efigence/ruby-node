@@ -1,0 +1,93 @@
+{
+  "name": "budogram",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "@types/actioncable": "^0.0.2",
+    "@types/i18n-js": "^3.0.0",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-slick": "^0.23.2",
+    "axios": "^0.18.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-react": "^6.24.1",
+    "foundation-sites": "^6.4.3",
+    "ignore-loader": "^0.1.2",
+    "pre-commit": "^1.2.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-dropzone": "^5.1.0",
+    "react-slick": "^0.23.1",
+    "react_ujs": "^2.4.4",
+    "resolve-url-loader": "^2.3.0",
+    "slick-carousel": "^1.8.1",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.3",
+    "ts-loader": "3.5.0",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.5",
+    "@types/jest": "^23.1.4",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^23.3.0",
+    "ts-jest": "^23.0.0",
+    "tslint": "^5.10.0",
+    "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "lint:css": "stylelint '**/*.scss'",
+    "lint:css:fix": "stylelint \"./app/javascript/**/*.scss\" --fix",
+    "lint:ts": "tslint -c ./tslint.json -p ./tsconfig.json -t codeFrame -e node_modules"
+  },
+  "pre-commit": [
+    "lint:css",
+    "lint:ts"
+  ],
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "./spec/javascript/jest-config.js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleDirectories": [
+      "app/javascript/components",
+      "app/javascript",
+      "node_modules"
+    ],
+    "roots": [
+      "spec/javascript"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/spec/javascript/style-mock.js",
+      "\\.(png)$": "<rootDir>/spec/javascript/style-mock.js",
+      "\\.(jpg)$": "<rootDir>/spec/javascript/style-mock.js",
+      "\\.(svg)$": "<rootDir>/spec/javascript/style-mock.js"
+    }
+  }
+}
