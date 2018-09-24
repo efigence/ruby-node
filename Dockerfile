@@ -11,4 +11,6 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install --jobs $(nproc) --without=production
 
 COPY package.json yarn.lock ./
-RUN yarn install --cache-folder node_modules/cache_yarn
+RUN \
+  yarn install --no-emoji --frozen-lockfile && \
+  mv ./node_modules /usr/local/node_modules
