@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "@types/actioncable": "^0.0.2",
+    "@types/facebook-js-sdk": "^2.8.6",
     "@types/i18n-js": "^3.0.0",
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
@@ -42,11 +43,11 @@
     "webpack-dev-server": "2.11.2"
   },
   "scripts": {
-    "test": "jest",
-    "test-watch": "jest --watch",
-    "lint:css": "stylelint '**/*.scss'",
-    "lint:css:fix": "stylelint \"./app/javascript/**/*.scss\" --fix",
-    "lint:ts": "tslint -c ./tslint.json -p ./tsconfig.json -t codeFrame -e node_modules"
+    "test": "node_modules/.bin/jest",
+    "test-watch": "node_modules/.bin/jest --watch",
+    "lint:css": "node_modules/.bin/stylelint '**/*.scss'",
+    "lint:css:fix": "node_modules/.bin/stylelint \"./app/javascript/**/*.scss\" --fix",
+    "lint:ts": "node_modules/.bin/tslint -c ./tslint.json -p ./tsconfig.json -t codeFrame -e node_modules"
   },
   "pre-commit": [
     "lint:css",
