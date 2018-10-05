@@ -52,6 +52,7 @@ gem 'kaminari'
 gem 'trix-rails', require: 'trix'
 
 gem 'rollbar'
+gem 'route_translator'
 
 group :production do
   gem 'therubyracer'
