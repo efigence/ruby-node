@@ -51,6 +51,8 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'trix-rails', require: 'trix'
 
+gem 'rollbar'
+
 group :production do
   gem 'therubyracer'
 end
