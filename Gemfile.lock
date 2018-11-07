@@ -161,6 +161,8 @@ GEM
       multi_json
     equalizer (0.0.11)
     erubi (1.7.1)
+    et-orbi (1.1.6)
+      tzinfo
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -189,6 +191,9 @@ GEM
       activesupport (>= 4.1, < 6.0)
       railties (>= 4.1, < 6.0)
       tzinfo (~> 1.2, >= 1.2.2)
+    fugit (1.1.6)
+      et-orbi (~> 1.1, >= 1.1.6)
+      raabro (~> 1.1)
     fuubar (2.3.2)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -395,6 +400,7 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     puma (3.12.0-java)
+    raabro (1.1.6)
     rack (2.0.6)
     rack-protection (2.0.4)
       rack
@@ -502,6 +508,8 @@ GEM
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
+    rufus-scheduler (3.5.2)
+      fugit (~> 1.1, >= 1.1.5)
     rugged (0.27.5)
     safe_yaml (1.0.4)
     sass (3.4.25)
@@ -528,6 +536,11 @@ GEM
       connection_pool (~> 2.2, >= 2.2.2)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
+    sidekiq-scheduler (3.0.0)
+      redis (>= 3, < 5)
+      rufus-scheduler (~> 3.2)
+      sidekiq (>= 3)
+      tilt (>= 1.4.0)
     signet (0.11.0)
       addressable (~> 2.3)
       faraday (~> 0.9)
@@ -538,6 +551,8 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
+    sitemap_generator (6.0.1)
+      builder (~> 3.0)
     spoon (0.0.6)
       ffi
     spring (2.0.2)
@@ -692,7 +707,9 @@ DEPENDENCIES
   searchkick
   shoulda-matchers (~> 3.1)
   sidekiq
+  sidekiq-scheduler (~> 3.0)
   simplecov
+  sitemap_generator
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
