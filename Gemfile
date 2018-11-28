@@ -51,7 +51,7 @@ gem 'foundation_rails_helper'
 gem 'groupdate'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'trix-rails', require: 'trix'
+gem 'tinymce-rails'
 
 gem 'rollbar'
 gem 'route_translator'
