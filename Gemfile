@@ -36,6 +36,10 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 
+# necessary dependencies
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6'
+
 gem 'i18n-js'
 gem 'rails-i18n', '~> 5.1'
 
