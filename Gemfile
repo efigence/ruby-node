@@ -56,6 +56,7 @@ gem 'groupdate'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 
 gem 'rollbar'
 gem 'route_translator'
