@@ -30,11 +30,13 @@ gem 'sassc-rails'
 gem 'searchkick'
 gem 'sidekiq'
 gem 'sidekiq-scheduler', '~> 3.0'
-gem 'sitemap_generator'
 gem 'timecop', '~> 0.9.1'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
+
+# SEO
+gem 'sitemap_generator'
 
 # necessary dependencies
 gem 'sprockets', '>= 3.0.0'
@@ -73,6 +75,7 @@ group :development, :test do
   gem 'fuubar'
   gem 'pry-byebug'
   gem 'rails-controller-testing'
+  gem 'rb-readline'
   gem 'rspec-its'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 3.1'
