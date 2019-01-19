@@ -35,6 +35,9 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 
+# JS runtime env:
+gem 'mini_racer'
+
 # SEO
 gem 'sitemap_generator'
 
@@ -62,10 +65,6 @@ gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 
 gem 'rollbar'
 gem 'route_translator'
-
-group :production do
-  gem 'therubyracer'
-end
 
 group :development, :test do
   gem 'bundler-audit', require: false
