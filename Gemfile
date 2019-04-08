@@ -70,6 +70,7 @@ gem 'rollbar'
 gem 'route_translator'
 
 group :development, :test do
+  gem 'active_record_query_trace'
   gem 'bundler-audit', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '~> 3.3'
