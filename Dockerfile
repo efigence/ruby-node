@@ -1,5 +1,6 @@
 FROM starefossen/ruby-node:2-8
 
+RUN apt-get update
 RUN apt-get install -y -qq libpq-dev cmake
 RUN gem install bundler --no-ri --no-rdoc
 RUN bundle config without production
