@@ -56,6 +56,7 @@ gem 'inky-rb', require: 'inky'
 gem 'premailer-rails' # Stylesheet inlining for email **
 
 # CMS
+gem 'active_link_to'
 gem 'chartkick'
 gem 'faker', '~> 1.8'
 gem 'foundation-rails'
