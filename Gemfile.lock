@@ -196,8 +196,6 @@ GEM
     fuubar (2.3.2)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    get_process_mem (0.2.4)
-      ffi (~> 1.0)
     gitlab (4.7.0)
       httparty (>= 0.14.0)
       terminal-table (>= 1.5.1)
@@ -410,9 +408,6 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     puma (3.12.0-java)
-    puma_worker_killer (0.1.1)
-      get_process_mem (~> 0.2)
-      puma (>= 2.7, < 5)
     raabro (1.1.6)
     rack (2.0.7)
     rack-protection (2.0.4)
@@ -718,7 +713,6 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma (~> 3.11)
-  puma_worker_killer
   rails (~> 5.2.0)
   rails-controller-testing
   rails-i18n (~> 5.1)
