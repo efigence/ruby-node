@@ -26,7 +26,12 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     active_record_query_trace (1.6.2)
+    active_storage_validations (0.8.3)
+      rails (>= 5.2.0)
     activejob (5.2.2.1)
       activesupport (= 5.2.2.1)
       globalid (>= 0.3.6)
@@ -63,10 +68,8 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bcrypt (3.1.12)
-    bcrypt (3.1.12-java)
-    bcrypt (3.1.12-x64-mingw32)
-    bcrypt (3.1.12-x86-mingw32)
+    bcrypt (3.1.13)
+    bcrypt (3.1.13-java)
     bindex (0.5.0)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
@@ -92,8 +95,6 @@ GEM
       sshkit (~> 1.2)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    capistrano-local-precompile (1.1.4)
-      capistrano (>= 3.8)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -133,7 +134,7 @@ GEM
     connection_pool (2.2.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.4)
+    crass (1.0.5)
     css_parser (1.6.0)
       addressable
     dalli (2.7.9)
@@ -142,10 +143,10 @@ GEM
     declarative-option (0.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (4.6.1)
+    devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 6.0)
+      railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
     devise-i18n (1.7.0)
@@ -161,6 +162,7 @@ GEM
       faraday
       multi_json
     equalizer (0.0.11)
+    error_page_assets (0.4)
     erubi (1.8.0)
     et-orbi (1.1.6)
       tzinfo
@@ -295,7 +297,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.3)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.13)
@@ -309,7 +311,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
     mimemagic (0.3.3)
-    mini_magick (4.9.2)
+    mini_magick (4.9.5)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     mini_racer (0.2.4)
@@ -328,12 +330,12 @@ GEM
     net-ssh (5.0.2)
     nio4r (2.3.1)
     nio4r (2.3.1-java)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.3-java)
-    nokogiri (1.10.3-x64-mingw32)
+    nokogiri (1.10.4-java)
+    nokogiri (1.10.4-x64-mingw32)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.3-x86-mingw32)
+    nokogiri (1.10.4-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.1)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -360,6 +362,9 @@ GEM
     omniauth-oauth2 (1.5.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
+    omniauth-rails_csrf_protection (0.1.2)
+      actionpack (>= 4.2)
+      omniauth (>= 1.3.1)
     orm_adapter (0.5.0)
     os (1.0.0)
     parallel (1.12.1)
@@ -405,7 +410,7 @@ GEM
     puma (3.12.0)
     puma (3.12.0-java)
     raabro (1.1.6)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-protection (2.0.4)
       rack
     rack-proxy (0.6.5)
@@ -432,7 +437,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     rails-i18n (5.1.2)
       i18n (>= 0.7, < 2)
@@ -445,7 +450,7 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (2.2.2)
       rake
-    rake (12.3.2)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -467,9 +472,9 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
-    responders (2.4.1)
-      actionpack (>= 4.2.0, < 6.0)
-      railties (>= 4.2.0, < 6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     retriable (3.1.2)
     rollbar (2.18.0)
       multi_json
@@ -649,7 +654,9 @@ PLATFORMS
 
 DEPENDENCIES
   action-cable-testing
+  active_link_to
   active_record_query_trace
+  active_storage_validations (~> 0.8.3)
   acts_as_votable (~> 0.11.1)
   autoprefixer-rails
   awesome_print
@@ -660,7 +667,6 @@ DEPENDENCIES
   capistrano
   capistrano-artrails (~> 0.1.7)
   capistrano-ext
-  capistrano-local-precompile
   capistrano-rails
   capistrano-rsync-bladrak
   capistrano-rvm
@@ -673,6 +679,7 @@ DEPENDENCIES
   database_cleaner
   devise (~> 4.4)
   devise-i18n
+  error_page_assets
   factory_bot_rails
   faker (~> 1.8)
   fast_jsonapi
@@ -699,6 +706,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-oauth2
+  omniauth-rails_csrf_protection
   pg (>= 0.18, < 2.0)
   premailer-rails
   pronto
@@ -744,7 +752,7 @@ DEPENDENCIES
   webpush
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.5.5p157
 
 BUNDLED WITH
    1.17.3
