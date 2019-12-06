@@ -7,6 +7,7 @@ ruby '~> 2.5.1'
 
 gem 'rails', '~> 5.2.0'
 
+gem 'active_storage_validations', '~> 0.8.3'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -103,7 +104,6 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-artrails', '~> 0.1.7'
   gem 'capistrano-ext'
-  gem 'capistrano-local-precompile'
   gem 'capistrano-rails'
   gem 'capistrano-rsync-bladrak'
   gem 'capistrano-rvm'

@@ -30,6 +30,8 @@ GEM
       actionpack
       addressable
     active_record_query_trace (1.6.2)
+    active_storage_validations (0.8.3)
+      rails (>= 5.2.0)
     activejob (5.2.2.1)
       activesupport (= 5.2.2.1)
       globalid (>= 0.3.6)
@@ -93,8 +95,6 @@ GEM
       sshkit (~> 1.2)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    capistrano-local-precompile (1.1.4)
-      capistrano (>= 3.8)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -297,7 +297,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.4.0)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.13)
@@ -656,6 +656,7 @@ DEPENDENCIES
   action-cable-testing
   active_link_to
   active_record_query_trace
+  active_storage_validations (~> 0.8.3)
   acts_as_votable (~> 0.11.1)
   autoprefixer-rails
   awesome_print
@@ -666,7 +667,6 @@ DEPENDENCIES
   capistrano
   capistrano-artrails (~> 0.1.7)
   capistrano-ext
-  capistrano-local-precompile
   capistrano-rails
   capistrano-rsync-bladrak
   capistrano-rvm
@@ -752,7 +752,7 @@ DEPENDENCIES
   webpush
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.5.5p157
 
 BUNDLED WITH
    1.17.3
