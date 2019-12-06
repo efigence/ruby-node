@@ -407,8 +407,8 @@ GEM
     pry-rails (0.3.7)
       pry (>= 0.10.4)
     public_suffix (3.0.3)
-    puma (3.12.0)
-    puma (3.12.0-java)
+    puma (3.12.2)
+    puma (3.12.2-java)
     raabro (1.1.6)
     rack (2.0.7)
     rack-protection (2.0.4)
@@ -714,7 +714,7 @@ DEPENDENCIES
   pronto-rubocop
   pry-byebug
   pry-rails
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.0)
   rails-controller-testing
   rails-i18n (~> 5.1)
