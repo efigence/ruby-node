@@ -337,7 +337,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
-    nokogumbo (2.0.1)
+    nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
     notiffany (0.1.1)
       nenv (~> 0.1)
@@ -521,7 +521,7 @@ GEM
       fugit (~> 1.1, >= 1.1.5)
     rugged (0.27.5)
     safe_yaml (1.0.4)
-    sanitize (5.0.0)
+    sanitize (5.2.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.8.0)
       nokogumbo (~> 2.0)
@@ -726,7 +726,7 @@ DEPENDENCIES
   rspec-its
   rspec-rails
   rubocop-rspec
-  sanitize (~> 5.0)
+  sanitize (~> 5.2)
   sassc-rails
   searchkick
   serviceworker-rails (~> 0.5.5)
