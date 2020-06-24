@@ -410,7 +410,7 @@ GEM
     puma (3.12.4)
     puma (3.12.4-java)
     raabro (1.1.6)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.4)
       rack
     rack-proxy (0.6.5)
