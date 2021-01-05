@@ -13,7 +13,7 @@
     "@types/react-select": "^2.0.4",
     "@types/react-slick": "^0.23.2",
     "aos": "^3.0.0-beta.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-react": "^6.24.1",
     "foundation-sites": "^6.4.3",
